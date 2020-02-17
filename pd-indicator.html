@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 Test Page</title>
+		<meta name="description" content="HTML5 Custom Web Element Test Page">
+		<meta name="author" content="Peter Darmis">
+		<style>
+			html, body {
+			height: 100%;
+			overflow: hidden;
+			-webkit-perspective: 37.5rem;
+			-moz-perspective: 37.5rem;
+			perspective: 37.5rem;
+			}
+			:host {
+			display: block;
+			}
+			div {
+			  width: auto;
+			  max-width: 7rem;
+			  display: flex;
+			  justify-content: space-between;
+			  align-items: center;
+			  align-content: center;
+			  padding: .5rem 0;
+			}
+
+			pd-indicator:not(:defined) {
+			  display: none;
+			}
+
+			pd-indicator,
+			pd-indicator:defined {
+			  display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		  <pd-indicator type="infinity" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="infinity" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="infinity" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="heart" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="heart" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="heart" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="circle" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="circle" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="circle" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="rectangle" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="rectangle" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="rectangle" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="pointer" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="pointer" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="pointer" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="moon" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="moon" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="moon" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="yin-yang" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="yin-yang" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="yin-yang" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="pacman" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="pacman" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="pacman" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div>
+		  <pd-indicator type="switch" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="switch" color="000099" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="switch" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<div id="last">
+		  <pd-indicator type="octastar" color="000066" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="octastar" color="000066" active-color="990000">
+		  </pd-indicator>
+		  <pd-indicator type="octastar" color="000066" active-color="990000">
+		  </pd-indicator>
+		</div>
+		<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
+		<script type="module" src="pd-indicator.js"></script>
+		<script type="text/javascript">
+			customElements.whenDefined('pd-indicator').then(() => {	
+				document.getElementById("last").querySelectorAll("pd-indicator").forEach((item) => {
+				  let type = item.getAttribute("type");
+				  item.addEventListener("click", (e) => {
+					e.target.getAttribute("type") == "circle" ? e.target.setAttribute("type", type) : e.target.setAttribute("type", "circle") ;
+				  });
+				});
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML5 Test Page</title>
+		<meta name="description" content="HTML5 Custom Web Element Test Page">
+		<meta name="author" content="Peter Darmis">
+		<style>
+			html, body {
+			height: 100%;
+			overflow: hidden;
+			-webkit-perspective: 37.5rem;
+			-moz-perspective: 37.5rem;
+			perspective: 37.5rem;
+			}
+			:host {
+			display: block;
+			}
+			div {
+			  width: auto;
+			  max-width: 7rem;
+			  display: flex;
+			  justify-content: space-between;
+			  align-items: center;
+			  align-content: center;
+			  padding: .5rem 0;
+			}
+
+			pd-indicator:not(:defined) {
+			  display: none;
+			}
+
+			pd-indicator,
+			pd-indicator:defined {
+			  display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+		  <pd-indicator type="infinity" color="000099" active-color="990000">
+		  </pd-indicator>
+		</div>
+	</body>
+</html>
