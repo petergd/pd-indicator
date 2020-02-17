@@ -1,4 +1,4 @@
-# pd-modal
+# pd-indicator
 
 A custom web component that can be used in web applications or websites. It provides a set of indicator icons designed for pd-carousel that could also be used on their own.
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-indicator)
