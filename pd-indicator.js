@@ -1,12 +1,13 @@
 export class pdIndicator extends HTMLElement {
   static get observedAttributes() {
-    return ['type', 'color', 'active-color'];
+    return ['type', 'color', 'active-color', 'active'];
   }
   constructor() {
     super();
     this.sRoot = this.attachShadow({
       mode: 'closed'
     });
+	this.active = (this.getAttribute("active") == "true");
     this.indicatorStyles = ['moon', 'yin-yang', 'pointer', 'rectangle', 'circle', 'pacman', 'octastar', 'infinity', 'heart'];
     this.color = this.checkColor(this.getAttribute("color"));
     this.activeColor = this.checkColor(this.getAttribute("active-color"), true);
@@ -44,6 +45,9 @@ export class pdIndicator extends HTMLElement {
       e.preventDefault();
       e.target.classList.toggle('active');
     });
+	if(!this.isEmpty(this.active)) {
+		p.click();
+	}
     this.sRoot.append(p);
   }
   checkColor(color, active = false) {
@@ -73,6 +77,7 @@ export class pdIndicator extends HTMLElement {
     this.activeColor = this.checkColor(this.getAttribute("active-color"), true);
     let type = this.getAttribute("type");
     this.type = (!this.isEmpty(type) && this.indicatorStyles.includes(type)) ? type : 'circle';
+	this.active = (this.getAttribute("active") == "true");
     this.init();
   }
   disconnectedCallback() {
@@ -88,6 +93,9 @@ export class pdIndicator extends HTMLElement {
     }
     if (name == "active-color") {
       this.activeColor = this.checkColor(this.getAttribute("active-color"), true);
+    }
+	if (name == "active") {
+      this.active = (this.getAttribute("active") == "true");
     }
     if (name == "type") {
       let type = this.getAttribute("type");
