@@ -8,6 +8,7 @@ export class pdIndicator extends HTMLElement {
       mode: 'closed'
     });
 	this.active = (this.getAttribute("active") == "true");
+	console.log(this.active);
     this.indicatorStyles = ['moon', 'yin-yang', 'pointer', 'rectangle', 'circle', 'pacman', 'octastar', 'infinity', 'heart'];
     this.color = this.checkColor(this.getAttribute("color"));
     this.activeColor = this.checkColor(this.getAttribute("active-color"), true);
@@ -96,11 +97,12 @@ export class pdIndicator extends HTMLElement {
     }
 	if (name == "active") {
       this.active = (this.getAttribute("active") == "true");
+	   this.init();
     }
     if (name == "type") {
       let type = this.getAttribute("type");
       this.type = (!this.isEmpty(type) && this.indicatorStyles.includes(type)) ? type : 'circle';
-      this.init();
+	  this.init();
     }
   }
 }
