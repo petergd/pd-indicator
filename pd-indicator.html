@@ -124,6 +124,7 @@
 				document.getElementById("last").querySelectorAll("pd-indicator").forEach((item) => {
 				  let type = item.getAttribute("type");
 				  item.addEventListener("click", (e) => {
+				  console.log(e.target);
 					e.target.getAttribute("type") == "circle" ? e.target.setAttribute("type", type) : e.target.setAttribute("type", "circle") ;
 				  });
 				});
