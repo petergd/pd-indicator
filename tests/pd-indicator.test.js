@@ -7,7 +7,7 @@ describe("pd-indicator", () => {
         const component = new pdIndicator();
         expect(typeof component.indicatorStyles).toEqual("object");
 		expect(component.indicatorStyles.length > 0).toBeTrue();
-		expect(component.indicatorStyles).toEqual(['moon', 'yin-yang', 'pointer', 'rectangle', 'circle', 'pacman', 'octastar', 'infinity', 'heart']);
+		expect(component.indicatorStyles).toEqual(['moon', 'yin-yang', 'pointer', 'rectangle', 'circle', 'pacman', 'octastar', 'infinity', 'heart','switch']);
     });
   });
   describe("color", () => {
