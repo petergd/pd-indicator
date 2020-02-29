@@ -9,7 +9,7 @@ export class pdIndicator extends HTMLElement {
     });
 	this.active = (this.getAttribute("active") == "true");
 	console.log(this.active);
-    this.indicatorStyles = ['moon', 'yin-yang', 'pointer', 'rectangle', 'circle', 'pacman', 'octastar', 'infinity', 'heart'];
+    this.indicatorStyles = ['moon', 'yin-yang', 'pointer', 'rectangle', 'circle', 'pacman', 'octastar', 'infinity', 'heart','switch'];
     this.color = this.checkColor(this.getAttribute("color"));
     this.activeColor = this.checkColor(this.getAttribute("active-color"), true);
     this.focusColor = (parseInt(this.activeColor, 16)/2).toString(16);

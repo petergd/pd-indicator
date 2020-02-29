@@ -1,6 +1,6 @@
 {
   "name": "pd-indicator",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Custom Web Component indicator icons for pd-carousel",
   "main": "pd-indicator.js",
   "scripts": {
