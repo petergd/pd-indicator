@@ -1,6 +1,6 @@
 {
   "name": "pd-indicator",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Custom Web Component indicator icons for pd-carousel",
   "main": "pd-indicator.js",
   "scripts": {
@@ -22,11 +22,22 @@
   },
   "author": "Peter Darmis",
   "license": "MIT",
+  "files": [
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js",
+    "node_modules/icono/dist/icono.min.css",
+    "tests/test.html",
+    "test-utils.js",
+    "tests/pd-indicator.test.js",
+    "fonts/*",
+    "pd-indicator.js",
+    "pd-indicator.html"
+  ],
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.1"
+    "@webcomponents/webcomponentsjs": "^2.4.2",
+    "icono": "^1.3.2"
   },
   "devDependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.1",
+    "@webcomponents/webcomponentsjs": "^2.4.2",
     "chai": "^4.2.0",
     "jasmine": "^3.5.0",
     "karma": "^4.4.1",
