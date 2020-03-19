@@ -1,7 +1,7 @@
 {
   "name": "pd-indicator",
-  "version": "1.0.9",
-  "description": "Custom Web Component indicator icons for pd-carousel",
+  "version": "1.1.0",
+  "description": "Custom Web Component CSS icons for any use.",
   "main": "pd-indicator.js",
   "scripts": {
     "test": "karma start --single-run --browsers Firefox karma.conf.js"
@@ -33,7 +33,6 @@
     "pd-indicator.html"
   ],
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.2",
     "icono": "^1.3.2"
   },
   "devDependencies": {
@@ -51,5 +50,17 @@
     "karma-spec-reporter": "0.0.32",
     "puppeteer": "^2.0.0"
   },
-  "homepage": "https://github.com/petergd/pd-indicator#readme"
+  "homepage": "https://github.com/petergd/pd-indicator#readme",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  }
 }

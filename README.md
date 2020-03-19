@@ -1,9 +1,10 @@
 # pd-indicator
 
-A custom web component that can be used in web applications or websites. It provides a set of indicator icons designed for pd-carousel that could also be used on their own.
+A custom web component that can be used in web applications or websites. It provides a set of CSS icons designed for usage in other web components that could also be used on their own. Most of the icons used are from [iconocss](https://saeedalipoor.github.io/icono/)
+
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-indicator)
 
-[Demo page (by unpkg.com)](https://unpkg.com/pd-indicator@1.0.0/pd-indicator.html)
+[Demo page (visit wiki)](https://github.com/petergd/pd-indicator/wiki)
 
 ## Getting Started
 
