@@ -7,36 +7,48 @@
 		<meta name="author" content="Peter Darmis">
 		<style>
 			html, body {
-			height: auto;
-			overflow: hidden;
-			-webkit-perspective: 37.5rem;
-			-moz-perspective: 37.5rem;
-			perspective: 37.5rem;
+			height: 100%;
 			}
 			:host {
 			display: block;
 			}
 			div {
-			  width: 100%;
+			  width: 80%;
+			  margin: 0 auto;
+			  top: 0;
+			  position: relative;
+			  height: auto;
 			  display: flex;
-			  justify-content: space-between;
+			  justify-content: space-around;
 			  align-items: center;
 			  align-content: center;
 			  flex-direction: row;
 			  flex-wrap: wrap;
 			  
 			}
-			div#last {
-			  width: 7rem;
-			}
 			pd-indicator:not(:defined) {
 			  display: none;
 			}
+			pd-indicator:hover:after {
+			  content: attr(type);
+			  opacity: 1;
+			  width: 8rem;
+			  background-color: black;
+			  color: #fff;
+			  font-size: 1.5rem;
+			  text-align: center;
+			  border-radius: 0 0.375rem 0.375rem 0.375rem;
+			  padding: .5rem;
 
+			  /* Position the tooltip */
+			  position: absolute;
+			  margin: 0.5rem 0 0 0.5rem;
+			  z-index: 1;
+			}
 			pd-indicator,
 			pd-indicator:defined {
 			  display: block;
-			  flex: 1 1 4rem;
+			  flex: 1 1 5rem;
 			  padding: .75rem;
 			}
 		</style>
@@ -50,162 +62,165 @@
 			<pd-indicator type="circle" color="000099" active-color="990000"></pd-indicator>
 			<pd-indicator type="pacman" color="000099" active-color="990000"></pd-indicator>
 			<pd-indicator type="octastar" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="donut" color="000099" active-color="990000"></pd-indicator>
 			<pd-indicator type="infinity" color="000099" active-color="990000"></pd-indicator>
 			<pd-indicator type="heart" color="000099" active-color="990000"></pd-indicator>
 			<pd-indicator type="switch" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-home" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-mail" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-rss" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-hamburger" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-plus" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-cross" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-check" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-power" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-heart" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-infinity" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-flag" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-file" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-image" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-video" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-music" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-headphone" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-document" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-folder" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-pin" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-smile" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-eye" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-sliders" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-share" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-sync" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-reset" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-gear" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-signIn" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-signOut" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-support" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-dropper" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-tiles" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-list" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-chain" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-youtube" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-rename" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-search" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-book" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-forbidden" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-trash" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-keyboard" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-mouse" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-user" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-crop" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-display" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-imac" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-iphone" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-macbook" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-imacBold" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-iphoneBold" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-macbookBold" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-nexus" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-microphone" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-asterisk" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-terminal" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-paperClip" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-market" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-clock" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-textAlignRight" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-textAlignCenter" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-textAlignLeft" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-indent" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-outdent" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-frown" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-meh" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-locationArrow" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-plusCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-checkCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-crossCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-exclamation" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-exclamationCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-comment" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-commentEmpty" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-areaChart" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-pieChart" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-barChart" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-bookmark" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-bookmarkEmpty" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-filter" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volume" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volumeLow" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volumeMedium" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volumeHigh" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volumeDecrease" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volumeIncrease" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-volumeMute" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-tag" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-calendar" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-camera" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-piano" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-ruler" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-cup" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-creditCard" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-facebook" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-twitter" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-gplus" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-linkedIn" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-instagram" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-flickr" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-delicious" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-codepen" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-blogger" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-play" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-pause" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-stop" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-rewind" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-forward" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-next" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-previous" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretRight" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretLeft" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretUp" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretDown" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-rightArrow" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-leftArrow" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-upArrow" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-downArrow" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-sun" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-moon" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-disqus" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-cart" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretRightCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretLeftCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretUpCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretDownCircle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretRightSquare" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretLeftSquare" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretUpSquare" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-caretDownSquare" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-dribbble" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-sitemap" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-spinner" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-circle" color="000099" active-color="990000"></pd-indicator>
-			<pd-indicator type="icono-ellipsis" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-home" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-mail" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-rss" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-bluetooth" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-hamburger" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-plus" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-cross" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-check" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-power" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-heart" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-infinity" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-flag" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-file" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-image" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-video" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-music" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-headphone" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-document" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-folder" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-pin" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-smile" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-eye" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-sliders" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-share" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-sync" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-reset" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-gear" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-signIn" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-signOut" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-support" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-dropper" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-tiles" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-list" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-chain" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-youtube" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-rename" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-search" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-book" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-forbidden" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-trash" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-keyboard" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-mouse" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-user" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-crop" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-display" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-imac" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-iphone" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-macbook" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-imacBold" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-iphoneBold" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-macbookBold" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-nexus" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-microphone" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-asterisk" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-terminal" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-paperClip" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-market" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-clock" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-textAlignRight" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-textAlignCenter" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-textAlignLeft" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-indent" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-outdent" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-frown" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-meh" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-locationArrow" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-plusCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-checkCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-crossCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-exclamation" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-exclamationCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-comment" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-commentEmpty" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-areaChart" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-pieChart" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-barChart" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-bookmark" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-bookmarkEmpty" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-filter" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volume" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volumeLow" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volumeMedium" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volumeHigh" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volumeDecrease" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volumeIncrease" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-volumeMute" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-tag" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-calendar" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-camera" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-piano" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-ruler" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-cup" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-creditCard" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-facebook" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-twitter" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-gplus" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-linkedIn" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-instagram" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-flickr" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-delicious" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-codepen" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-blogger" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-play" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-pause" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-stop" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-rewind" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-forward" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-next" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-previous" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretRight" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretLeft" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretUp" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretDown" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-rightArrow" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-leftArrow" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-upArrow" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-downArrow" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-sun" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-moon" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-disqus" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-cart" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretRightCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretLeftCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretUpCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretDownCircle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretRightSquare" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretLeftSquare" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretUpSquare" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-caretDownSquare" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-dribbble" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-sitemap" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-spinner" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-circle" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator type="icon-ellipsis" color="000099" active-color="990000"></pd-indicator>
+			<pd-indicator class="last" type="octastar" color="000066" active-color="990000" active="true">
+			</pd-indicator>
+			<pd-indicator class="last" type="octastar" color="000066" active-color="990000">
+			</pd-indicator>
+			<pd-indicator class="last" type="octastar" color="000066" active-color="990000">
+			</pd-indicator>
+			</div>
 		</div>
-		<div id="last">
-		  <pd-indicator type="octastar" color="000066" active-color="990000" active="true">
-		  </pd-indicator>
-		  <pd-indicator type="octastar" color="000066" active-color="990000">
-		  </pd-indicator>
-		  <pd-indicator type="octastar" color="000066" active-color="990000">
-		  </pd-indicator>
-		</div>
+		
 		<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js"></script>
 		<script type="module" src="pd-indicator.js"></script>
 		<script type="text/javascript">
 			customElements.whenDefined('pd-indicator').then(() => {	
-				document.getElementById("last").querySelectorAll("pd-indicator").forEach((item) => {
-				  let type = item.getAttribute("type");
-				  item.addEventListener("click", (e) => {
-					e.target.getAttribute("type") == "circle" ? e.target.setAttribute("type", type) : e.target.setAttribute("type", "circle") ;
-				  });
+				document.querySelectorAll("pd-indicator.last").forEach((item) => {
+					let type = item.getAttribute("type");
+					item.addEventListener("click", (e) => {
+						e.target.getAttribute("type") == "circle" ? e.target.setAttribute("type", type) : e.target.setAttribute("type", "circle") ;
+					});
 				});
 				document.querySelector("pd-indicator").setAttribute("active","true");
+				
 			});
 		</script>
 	</body>
