@@ -1,6 +1,6 @@
 {
   "name": "pd-indicator",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "Custom Web Component CSS icons for any use.",
   "main": "pd-indicator.js",
   "scripts": {
@@ -30,9 +30,7 @@
     "pd-indicator.js",
     "pd-indicator.html"
   ],
-  "dependencies": {
-	  "@webcomponents/webcomponentsjs": "^2.4.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
     "jasmine": "^3.5.0",
@@ -47,17 +45,5 @@
     "karma-spec-reporter": "0.0.32",
     "puppeteer": "^2.0.0"
   },
-  "homepage": "https://github.com/petergd/pd-indicator#readme",
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "@babel/preset-env"
-          ]
-        }
-      ]
-    ]
-  }
+  "homepage": "https://github.com/petergd/pd-indicator#readme"
 }

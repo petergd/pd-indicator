@@ -4,7 +4,7 @@ A custom web component that can be used in web applications or websites. It prov
 
 [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/pd-indicator)
 
-[Demo page](https://unpkg.com/pd-indicator@1.1.3/pd-indicator.html)
+[Demo page](https://unpkg.com/pd-indicator@1.1.4/pd-indicator.html)
 
 ## Getting Started
 
