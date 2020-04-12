@@ -102,6 +102,16 @@ The element's parameters are:
 	    display: block;
 	}
 
+<!--
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="pd-indicator.html">
+  </template>
+</custom-element-demo>
+```
+-->
+
 ***Example HTML***
 
 	<div>
