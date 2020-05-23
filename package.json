@@ -1,6 +1,6 @@
 {
   "name": "pd-indicator",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "Custom Web Component CSS icons for any use.",
   "main": "pd-indicator.js",
   "scripts": {
@@ -18,7 +18,7 @@
   ],
   "bugs": {
     "url": "https://github.com/petergd/pd-indicator/issues",
-    "email": "pdarmis@gmail.com"
+    "email": "11849215+petergd@users.noreply.github.com"
   },
   "author": "Peter Darmis",
   "license": "MIT",
